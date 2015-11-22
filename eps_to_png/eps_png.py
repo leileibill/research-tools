@@ -28,7 +28,7 @@ while True:
         for files in matches:
             try:
                 fileName, fileExtension = os.path.splitext(files)
-                subprocess.call(['C:\\Program Files\ImageMagick-6.8.9-Q16\convert', '-density','300', watchdir + files,watchdir + fileName + '.png'])
+                subprocess.call(['C:\\Program Files\ImageMagick-6.8.9-Q16\convert', '-density','300', '-trim', watchdir + files,watchdir + fileName + '.png'])
                 shutil.copy(watchdir+files,watchdir+'processed/'+files)
                 os.remove(watchdir+files)
             except IOError:
