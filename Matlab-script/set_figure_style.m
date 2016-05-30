@@ -2,6 +2,10 @@
 set(gca,'FontName','TimesNewRoman') 
 set(findall(gcf,'type','text'),'FontName','TimesNewRoman')
 
+% set font size
+set(gca,'FontSize',12) 
+set(findall(gcf,'type','text'),'FontSize',12)
+
 % set grid style
 set(gca,'xcolor',[0.75 0.75 0.75],'ycolor',[0.75 0.75 0.75])
 set(gca,'GridLineStyle','-')
