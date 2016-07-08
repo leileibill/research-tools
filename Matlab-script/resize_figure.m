@@ -1,14 +1,15 @@
-function resize_figure(width, height)
+function resize_figure(scale, ratio)
 
 if nargin <1
-    width=7;
+    scale = 2;
 end
 
 if nargin < 2
-  height=width*0.6;
->>>>>>> origin/master
+    ratio = 0.6;
 end
 
+width = 3.5*scale;
+height = 3.5*scale*ratio
 % f = gcf;
 % f.Units = 'inches';   % works only after 2014b
 
