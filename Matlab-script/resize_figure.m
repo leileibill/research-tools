@@ -16,5 +16,6 @@ po = 1;
 set(gcf, 'Units', 'inches')
 set(gcf, 'Position', [po po width height])
 set(gcf,'PaperPositionMode','auto')
+set(gcf,'PaperSize', [width height])
 
 end

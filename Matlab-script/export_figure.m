@@ -5,7 +5,8 @@ if nargin <1
 end
 
 print('-dpng','-r600', strcat(name,'.png'));   % exort as png
-print('-depsc', strcat(name,'.eps'));    % export as eps
+print('-depsc', '-painters',strcat(name,'.eps'));    % export as eps
+% print('-dpdf', '-painters',strcat(name,'.pdf'));    % export as pdf
 
 end
 
