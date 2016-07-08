@@ -1,13 +1,6 @@
 function resize_figure(width, height)
 
 if nargin <1
-<<<<<<< HEAD
-    width=360;
-end
-
-if nargin < 2
-  height=width*0.5;
-=======
     width=7;
 end
 
