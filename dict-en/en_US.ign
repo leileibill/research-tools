@@ -1,6 +1,9 @@
 %Ignored-Words;encoding:utf-8;version:TeXstudio:1.8
+circuitries
+Coilcraft
 commutate
 deadtime
+decomposable
 Doubler
 efficiencies
 eps
@@ -9,6 +12,7 @@ FCML
 FET
 FSL
 GaN
+IHLP
 inductor
 Inductor
 inductors
@@ -17,11 +21,17 @@ KVL
 losslessly
 magnetics
 MOSFETs
+Nitride
+parasitics
 PWM
 QSW
 shifter
 SSL
+TDK
 topologies
+Vishay
+volumetric
 waveforms
+XAL
 ZCS
 ZVS
