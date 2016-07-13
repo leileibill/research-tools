@@ -19,8 +19,8 @@ function set_figure_style(scale)
 
     % Axis title label
     h = gca;
-    set(h.YLabel,'FontSize',9*scale,'Interpreter','latex');
-    set(h.XLabel,'FontSize',9*scale,'Interpreter','latex');
+    set(h.YLabel,'FontSize',8*scale,'Interpreter','latex');
+    set(h.XLabel,'FontSize',8*scale,'Interpreter','latex');
 
     % set grid style
     set(gca,'xcolor',[0.75 0.75 0.75],'ycolor',[0.75 0.75 0.75])
