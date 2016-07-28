@@ -11,7 +11,7 @@ function set_figure_style(scale)
 
     % legend 
     l = findobj(gcf,'Tag','legend');
-    set(l,'FontSize',8*scale,'FontName','TimesNewRoman','Interpreter','latex')
+    set(l,'FontSize',7*scale,'FontName','TimesNewRoman','Interpreter','latex')
 
     % All other text on figure
     set(findall(gcf,'type','text'),'FontName','TimesNewRoman','Interpreter','latex')	% all fonts in the figure
