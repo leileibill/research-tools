@@ -24,6 +24,10 @@ function set_figure_style(scale)
         set(ha.YLabel,'FontSize',8*scale,'Interpreter','latex');
         set(ha.XLabel,'FontSize',8*scale,'Interpreter','latex');
 
+        % Change line width
+        h = findobj(gcf,'type','line');
+        set(h,'linewidth',0.75*scale);
+
         % set grid style
         set(ha,'xcolor',[0.75 0.75 0.75],'ycolor',[0.75 0.75 0.75])
         set(ha,'GridLineStyle','-')
