@@ -15,12 +15,9 @@ height = 3.5*scale*ratio;
 
 po = 1;
 set(gcf, 'Units', 'inches')
-set(gcf, 'Position', [po po width+po height+po])
+set(gcf, 'Position', [po po width height])
 set(gcf,'PaperPositionMode','auto')
-set(gcf,'PaperSize', [width height])
-
-% set(gca, 'Position', get(gca, 'OuterPosition') - ...
-%     get(gca, 'TightInset') * [-1 0 1 0; 0 -1 0 1; 0 0 1 0; 0 0 0 1]);
-% 
+set(gcf,'PaperSize', [width height])    % for pdf
+set(gca,'LooseInset',get(gca,'TightInset')) % remove white margin
 
 end
