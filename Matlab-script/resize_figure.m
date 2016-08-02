@@ -9,7 +9,7 @@ if nargin < 2
 end
 
 width = 3.5*scale;
-height = 3.5*scale*ratio
+height = 3.5*scale*ratio;
 % f = gcf;
 % f.Units = 'inches';   % works only after 2014b
 
@@ -18,5 +18,5 @@ set(gcf, 'Units', 'inches')
 set(gcf, 'Position', [po po width height])
 set(gcf,'PaperPositionMode','auto')
 set(gcf,'PaperSize', [width height])
-
+set(gca,'LooseInset',get(gca,'TightInset')) % remove white margin
 end
