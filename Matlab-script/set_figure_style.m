@@ -21,8 +21,8 @@ function set_figure_style(scale)
         set(findall(gcf,'type','text'),'FontSize',8*scale)
 
         % Axis title label
-        set(ha.YLabel,'FontSize',8*scale,'Interpreter','latex');
-        set(ha.XLabel,'FontSize',8*scale,'Interpreter','latex');
+        set(ha.YLabel,'FontSize',9*scale,'Interpreter','latex');
+        set(ha.XLabel,'FontSize',9*scale,'Interpreter','latex');
 
         % Change line width
         h = findobj(gcf,'type','line');
