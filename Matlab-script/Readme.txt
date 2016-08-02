@@ -21,7 +21,7 @@ export_figure('figure_name');
 ********************************
 Major change log:
 
-set_figure_style now works for figure with subplots.
+2016-08-02: set_figure_style now works for figure with subplots.
 
 ********************************
 Known issues:
