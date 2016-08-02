@@ -19,6 +19,11 @@ resize_figure();
 export_figure('figure_name');
 
 ********************************
+Major change log:
+
+set_figure_style now works for figure with subplots.
+
+********************************
 Known issues:
 export_figure:	
 	.eps figure exported by the function has a white background that is larger than the figure for figures with subplots.
