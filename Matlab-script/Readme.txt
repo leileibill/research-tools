@@ -16,7 +16,12 @@ Example usage:
 After plotting in Matlab, add the following,
 set_figure_style();
 resize_figure();
-export_figure('figure_name');
+export_figure('figure_name','eps,png');	
+
+********************************
+Major change log:
+2016-08-04: export_figure now also saves the Matlab figure format. It also accepts options to choose which format to save.
+2016-08-02: set_figure_style now works for figure with subplots.
 
 ********************************
 Known issues:
