@@ -20,15 +20,15 @@ export_figure('figure_name','eps,png');
 
 ********************************
 Major change log:
+2016-08-06: set_figure_style() now changes the inset so that there is white margin for any figure format saved. The width is as specified now as well.
 2016-08-04: export_figure now also saves the Matlab figure format. It also accepts options to choose which format to save.
 2016-08-02: set_figure_style now works for figure with subplots.
 
 ********************************
 Known issues:
 export_figure:	
-	.eps figure exported by the function has a white background that is larger than the figure for figures with subplots.
-	.png figure exported by the function has a white background that is larger than the figure
+
 set_figure_style:	
 	Label text should be in size 9, but the change all text font size will change label text of the previous subplots in subplots
-	Add linewidth in the future
-	Maybe should change to default values as a pre-processing, instead of as post-processing.
+	The codes that worked for removing the white background messed up figures with subplots. Will find a solution later.
+
