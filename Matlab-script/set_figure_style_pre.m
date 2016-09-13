@@ -5,8 +5,8 @@ function set_figure_style_pre(scale)
     end
     
     % Line width
-    set(0,'defaultlinelinewidth',0.75*scale)
-    
+    set(0,'DefaultLinelineWidth',0.75*scale)
+    set(0,'DefaultLineMarkerSize',3*scale)
     set(0,'DefaultAxesFontSize',8*scale)
 end
 

@@ -5,7 +5,7 @@ if nargin <1
 end
 
 if nargin < 2
-    ratio = 0.6;
+    ratio =0.618;
 end
 
 width = 3.5*scale;

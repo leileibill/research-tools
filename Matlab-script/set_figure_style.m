@@ -13,8 +13,8 @@ function set_figure_style(scale)
     set(l,'FontSize',8*scale,'FontName','TimesNewRoman','Interpreter','latex')    
 
     % Change line width
-    h = findobj(gcf,'type','line');
-    set(h,'linewidth',0.75*scale);
+%     h = findobj(gcf,'type','line');
+%     set(h,'linewidth',0.75*scale);
         
         
     ha_all = findobj(gcf,'type','axes');    % find all axes in the current figure   
