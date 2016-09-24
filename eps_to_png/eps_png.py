@@ -8,7 +8,7 @@ import shutil
 import subprocess
 
 # Folder to monitor
-watchdir = '//engr-power-01/Power/Projects/pilawa-group/eps_to_png/'
+watchdir = '//engr-power-01.engr.illinois.edu/Power/Projects/pilawa-group/eps_to_png/'
 contents = os.listdir(watchdir)
 count = len(contents)
 dirmtime = os.stat(watchdir).st_mtime
@@ -28,7 +28,7 @@ while True:
         for files in matches:
             try:
                 fileName, fileExtension = os.path.splitext(files)
-                subprocess.call(['C:\\Program Files\ImageMagick-6.8.9-Q16\convert', '-density','300', '-trim', watchdir + files,watchdir + fileName + '.png'])
+                subprocess.call(['C:\\Program Files\ImageMagick-7.0.3-Q16\convert', '-density','300', '-trim', watchdir + files,watchdir + fileName + '.png'])
                 shutil.copy(watchdir+files,watchdir+'processed/'+files)
                 os.remove(watchdir+files)
             except IOError:

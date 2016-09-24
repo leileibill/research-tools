@@ -8,7 +8,7 @@ import shutil
 import subprocess
 
 # Folder to monitor
-watchdir = '//engr-power-01/Power/Projects/pilawa-group/image_crop/'
+watchdir = './'
 contents = os.listdir(watchdir)
 count = len(contents)
 dirmtime = os.stat(watchdir).st_mtime
@@ -28,7 +28,7 @@ while True:
         for files in matches:
             try:
                 fileName, fileExtension = os.path.splitext(files)
-                subprocess.call(['C:\\Program Files (x86)\inkscape\inkscape', watchdir + files, '--export-pdf=' + watchdir + 'cropped/' + fileName + '.pdf','--export-area-drawing'])
+                subprocess.call(['C:\\Program Files\inkscape\inkscape', watchdir + files, '--export-pdf=' + watchdir + 'cropped/' + fileName + '.pdf','--export-area-drawing'])
                 #shutil.copy(watchdir+files,watchdir+'processed/'+files)
                 os.remove(watchdir+files)
             except IOError:
