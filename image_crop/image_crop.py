@@ -8,7 +8,7 @@ import shutil
 import subprocess
 
 # Folder to monitor
-watchdir = './'
+watchdir = '//engr-power-01.engr.illinois.edu/Power/Projects/pilawa-group/image_crop/'
 contents = os.listdir(watchdir)
 count = len(contents)
 dirmtime = os.stat(watchdir).st_mtime
