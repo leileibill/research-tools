@@ -10,7 +10,7 @@ function set_figure_style(scale)
     
     % legend 
     l = findobj(gcf,'Tag','legend');
-    set(l,'FontSize',8*scale,'FontName','TimesNewRoman','Interpreter','latex')    
+    set(l,'FontSize',7*scale,'FontName','TimesNewRoman','Interpreter','latex')    
 
     % Change line width
 %     h = findobj(gcf,'type','line');
