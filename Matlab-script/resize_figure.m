@@ -18,7 +18,7 @@ function resize_figure(scale, ratio)
 	set(gcf, 'Position', [po po width height])
 	set(gcf,'PaperPositionMode','auto')
 	set(gcf,'PaperSize', [width height])
-%     set(gca,'LooseInset',get(gca,'TightInset')) % remove white margin	
+    set(gca,'LooseInset',get(gca,'TightInset')) % remove white margin	
     
     % Only remove the white margin for single plots
     
