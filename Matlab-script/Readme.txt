@@ -1,22 +1,26 @@
 ********************************
 This folder contains Matlab scripts that are useful tools for preparing publications.
 ********************************
+set_figure_style_pre(scale):
+	Set the default line width and marker size used by the current Matlab session.
 set_figure_style(scale): 
-	set the style for figures. Use latex font and interpreter. Use grey solid line for major grid and grey dotted line for minor grid. Font size is 8*scale for all texts. Default: scale = 2
+	Set the style for figures. Use latex font and interpreter. Use grey solid line for major grid and grey dotted line for minor grid. Font size is 8*scale for all texts. Default: scale = 2
 resize_figure(scale, ratio): 
-	resize the current Matlab figure, width = 2.5 in * scale, and height = width*ratio. Default: scale = 2, ratio = 0.6
+	Resize the current Matlab figure, width = 2.5 in * scale, and height = width*ratio. Default: scale = 2, ratio = 0.618
 export_figure('figure_name'): 
-	export the current Matlab figure to both eps and png format. 
+	Export the current Matlab figure. Available formats are eps, pdf, png. An additional matlab .fig is always saved. 
 distinguishable_colors(numer_of_color): 
-	return colors that are easily distinguishable. Downloaded from Matlab Central.
+	Return colors that are easily distinguishable. Downloaded from Matlab Central.
 
 ********************************
 Example usage:
+At the start of a script, use
+set_figure_style_pre(2);	% relative size 2
 
-After plotting in Matlab, add the following,
-set_figure_style();
-resize_figure();
-export_figure('figure_name','eps,png');	
+After plotting in Matlab, use the following,
+set_figure_style(2);		% relative size 2
+resize_figure(2,0.7);		% relative size 2, aspect ratio 0.7
+export_figure('figure_name','pdf,png');		% save as figure_name.pdf and figure_name.png
 
 ********************************
 Major change log:
