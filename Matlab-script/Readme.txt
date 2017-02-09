@@ -22,6 +22,11 @@ set_figure_style(2);		% relative size 2
 resize_figure(2,0.7);		% relative size 2, aspect ratio 0.7
 export_figure('figure_name','pdf,png');		% save as figure_name.pdf and figure_name.png
 
+
+********************************
+Important note:
+Since the interpreter is changed to latex, it is necessary to use Latex syntex in the texts/labels. For example, the math environment $$ needs to be added around C_1, i.e. $C_1$, for the label to be interpreted correctly.
+
 ********************************
 Major change log:
 2016-08-06: set_figure_style() now changes the inset so that there is white margin for any figure format saved. The width is as specified now as well.
@@ -34,5 +39,5 @@ export_figure:
 
 set_figure_style:	
 	Label text should be in size 9, but the change all text font size will change label text of the previous subplots in subplots
-	The codes that worked for removing the white background messed up figures with subplots. Will find a solution later.
+	The codes that worked for removing the white background does not work for figures with subplots.
 
