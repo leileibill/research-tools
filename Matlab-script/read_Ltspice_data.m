@@ -1,8 +1,8 @@
 function [x y]=read_Ltspice_data(file_name,data_name)
-clc;
+
 data_file=fopen(file_name);
 C=textscan(data_file,'%s',-1,'delimiter','\n');
-[p q]=size(C{1});
+p=length(C{1});
 
 % Find number of iterations and x-axis values
 found=false;
@@ -10,7 +10,7 @@ iterations=0;
 x=[1];
 y=[1];
 for i=1:p
-    occurrance=strfind(C{1}(i),'.step');
+    occurrance=strfind(C{1}(i),'.step')
     if isempty(occurrance{1})==0
         occurrance=strfind(C{1}(i),'=');
         string_cell=C{1}(i);

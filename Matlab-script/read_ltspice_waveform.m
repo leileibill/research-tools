@@ -11,11 +11,9 @@ function y=read_ltspice_waveform(file_name)
 
     lines = C{1};       % saves each line as an entry
     p = length(lines);   % p is the number of lines in the file
-
-    % Find number of iterations and x-axis values
-    found=false;
-    iterations=0;
-
+    
+    first_line = strsplit(lines{1});
+    
     y = struct('info',{},'time',{},'value',{});
 
     i = 1;
