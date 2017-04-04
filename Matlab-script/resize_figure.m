@@ -18,15 +18,17 @@ function resize_figure(scale, ratio)
 	set(gcf, 'Position', [po po width height])
 	set(gcf,'PaperPositionMode','auto')
 	set(gcf,'PaperSize', [width height])
-    set(gca,'LooseInset',get(gca,'TightInset')) % remove white margin	
+   
     
     % Only remove the white margin for single plots
     
     ha_all = findobj(gcf,'type','axes');    % find all axes in the current figure   
     if (length(ha_all) == 1)
         ha = ha_all(1);
-          set(ha, 'Position', get(ha, 'OuterPosition') - ...
-            get(ha, 'TightInset') * [-1 0 1 0; 0 -1 0 1; 0 0 1 0; 0 0 0 1]);
+        set(ha, 'Position', get(ha, 'OuterPosition') - ...
+        get(ha, 'TightInset') * [-1 0 1 0; 0 -1 0 1; 0 0 1 0; 0 0 0 1]);
+    
+        set(gca,'LooseInset',get(gca,'TightInset')) % remove white margin	
     end
 %     for index = 1:length(ha_all)
 % 		ha = ha_all(index)
