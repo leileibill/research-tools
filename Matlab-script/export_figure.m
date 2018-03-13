@@ -5,7 +5,7 @@ function export_figure(name,options)
     end
 
     if nargin <2
-        options =  'eps,png';
+        options =  'pdf,png';
     end
 
 
