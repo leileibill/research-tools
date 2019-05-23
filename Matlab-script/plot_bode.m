@@ -22,10 +22,12 @@ function [f, mag, phase] = plot_bode(tf, freq_min, freq_max, line_style)
     xlabel('Frequency (Hz)');
     ylabel('Magnitude (dB)');
     hold on;
+    
     ax2 = subplot(2,1,2);
     semilogx(f,phase, line_style);
     xlabel('Frequency (Hz)');
     ylabel('Phase (degree)');
+    yticks([-360 -270 -180 -135 -90 -45 0 45 90 135 180 270 360])
     hold on
     
     linkaxes([ax2,ax1],'x'); 

@@ -9,7 +9,7 @@ function resize_figure(scale, ratio, all)
     end
 
     if nargin < 3
-		all = 'all';
+		all = '';
     end
     
 	width = 3.5*scale;
@@ -36,16 +36,16 @@ function resize_figure(scale, ratio, all)
         % Only remove the white margin for single plots
 
         ha_all = findobj(hf,'type','axes');    % find all axes in the current figure   
-        if (length(ha_all) == 1)
-            ha = ha_all(1);
-            set(ha, 'Position', get(ha, 'OuterPosition') - ...
-            get(ha, 'TightInset') * [-1 0 1 0; 0 -1 0 1; 0 0 1 0; 0 0 0 1]);
-
-            set(gca,'LooseInset',get(gca,'TightInset')); % remove white margin	
-        end
-        for index = 1:length(ha_all)
-            ha = ha_all(index);
-            set(ha,'LooseInset',get(ha,'TightInset')); % remove white margin
-        end
+%         if (length(ha_all) == 1)
+%             ha = ha_all(1);
+%             set(ha, 'Position', get(ha, 'OuterPosition') - ...
+%             get(ha, 'TightInset') * [-1 0 1 0; 0 -1 0 1; 0 0 1 0; 0 0 0 1]);
+% 
+%             set(gca,'LooseInset',get(gca,'TightInset')); % remove white margin	
+%         end
+%         for index = 1:length(ha_all)
+%             ha = ha_all(index);
+%             set(ha,'LooseInset',get(ha,'TightInset')); % remove white margin
+%         end
     end
 end
